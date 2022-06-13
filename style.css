@@ -1,15 +1,179 @@
 @import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@700&family=Lato:wght@300;400;700&display=swap');
 
+*, * + *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root{
     --primary: #FF5F5F;
     --white: #FCFCFC;
     --black: #2C2C2C;
+    --black-opacity: rgba(44,44,44,0.07);
 }
 
 body{
     font-family: 'Lato', sans-serif;
+    font-weight: 200;
+    color: var(--black);
+    width: 100%;
+    min-height: 1vh;
 }
 
 h1{
     font-family: 'Charmonman', cursive;
+    font-size: 106px;
+    text-align: center;
+}
+
+h2{
+    font-size: 72px;
+    font-weight: 400;
+    padding-bottom: .5em;
+}
+
+h4{
+    font-weight: 200;
+}
+
+section{
+    width: 100%;
+    padding: 3em;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* Navbar */
+
+nav{
+    width: 100%;
+    background-color: var(--black);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+nav > a{
+    font-size: 40px;
+    padding: 1em;
+}
+
+/* background */
+
+#background{
+    position: absolute;
+    color: var(--black-opacity);
+    font-size: 200px;
+    font-weight: 700;
+    width: 100%;
+    left: 0;
+    top: .5em;
+    z-index: -1;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+#background > p:nth-child(2){
+    text-align: right;
+}
+
+/* Landing page */
+.sub-header{
+    font-size: 40px;
+    font-weight: 300;
+    transform: translateY(-.5em);
+}
+
+/* About */
+
+#about-image{
+    width: 150%;
+    aspect-ratio: 1/1;
+    background-color: var(--primary);
+    border-radius: 50%;
+    transform: translateX(-30%);
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/* Footer */
+
+footer{
+    background-color: var(--black);
+    width: 100%;
+    color: var(--white);
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+    align-items: baseline;
+}
+
+footer h4{
+    font-weight: 700;
+}
+
+footer p{
+    padding: .25em 0;
+}
+
+/* Common */
+
+.h-group{
+    display: flex;
+    gap: 1em;
+    text-align: center;
+    padding: .5em 0;
+}
+
+.h-group > *{
+    background-color: var(--primary);
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+}
+
+.h-group .full-size{
+    width: fit-content;
+    border-radius: 2em;
+    padding: 0 1em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.group{
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    padding: 1em 0;
+}
+
+.card > img{
+    aspect-ratio: 16/9;
+    background-color: var(--primary);
+}
+
+.h-flex{
+    display: flex;
+    align-items: center;
 }
